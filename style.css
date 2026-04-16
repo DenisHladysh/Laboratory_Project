@@ -671,3 +671,164 @@ a {
 .footer-dark__legal a:hover {
   color: #fff;
 }
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 100; 
+}
+
+.burger span {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+
+.burger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+@media (max-width: 992px) {
+  .hero__title {
+    font-size: 50px;
+  }
+  
+  .space__inner, .comfort__inner, .app__inner, .stories__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .space__images, .comfort__images {
+    min-height: 400px;
+    width: 100%;
+  }
+
+  .space__content, .comfort__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .stories__header {
+    padding-top: 0;
+  }
+
+  
+  .app-section {
+    margin-top: 50px;
+  }
+  .img-phones {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: -60px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .social__list {
+    gap: 80px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  
+  .burger {
+    display: flex;
+  }
+
+
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: 100%;
+    height: 100vh;
+    background-color: var(--pink);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transition: right 0.4s ease;
+    z-index: 99;
+  }
+
+  .menu.active {
+    right: 0; 
+  }
+
+  .menu a {
+    font-size: 24px;
+  }
+
+  .header__actions {
+    display: none; 
+  }
+
+  
+  .hero__title {
+    font-size: 36px;
+  }
+  
+  .section-title {
+    font-size: 32px;
+  }
+
+  
+  .stories__grid {
+    flex-direction: column;
+  }
+  
+  .stories__col--left {
+    margin-top: 0;
+  }
+
+  
+  .social__list {
+    gap: 30px;
+  }
+  .social__link {
+    width: 70px;
+    height: 70px;
+  }
+
+  .footer-dark__grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-col--brand {
+    padding-right: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-col__socials {
+    justify-content: center;
+  }
+
+  .footer-col__contact li {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+  }
+
+  .footer-dark__bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
